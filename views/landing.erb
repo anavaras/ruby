@@ -1,0 +1,16 @@
+<h1>its from page <%= @name %> <%= @custom %> </h1>
+
+<% if @name %>
+  <h1>User Input - <%= @name %>!</h1>
+<% end %>
+
+<form action="/erb/landing" method="post">
+  <input type="text" name="name" value="<%= @name %>">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @fileRes.each do |fileContent| %>
+    <li> <%= fileContent %> </li>
+  <%end%>
+</ul>
